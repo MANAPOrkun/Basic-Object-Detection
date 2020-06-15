@@ -7,6 +7,10 @@ Some basic object detection algorithms used on images. I have created this repos
  <p align="center">
   <img src="template_matching_example.png" width="50%">.
 </p>
+
+<p align="center">
+  <img src="template_matching_example2.png" width="50%">.
+</p>
 </details>
 
 <details>

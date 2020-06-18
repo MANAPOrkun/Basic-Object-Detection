@@ -1,5 +1,5 @@
 # Basic-Object-Detection
-Some basic object detection algorithms used on images. I have created this repository to be able to check again from everywhere when I am stuck on writing code. 
+Some basic object detection algorithms used on images. 
 
 <details>
   <summary>Template Matching</summary>

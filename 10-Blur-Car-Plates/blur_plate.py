@@ -26,5 +26,4 @@ def detect_and_blur_plate(img):
 
 
 result = detect_and_blur_plate(car_img)
-plt.imshow(result)
 display(result)

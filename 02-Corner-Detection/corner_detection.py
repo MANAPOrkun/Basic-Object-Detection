@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-flat_chess = cv2.imread('flat_chessboard.png')
+flat_chess = cv2.imread('02-Corner-Detection/flat_chessboard.png')
 flat_chess = cv2.cvtColor(flat_chess, cv2.COLOR_BGR2RGB)
 
 gray_flat_chess = cv2.cvtColor(flat_chess, cv2.COLOR_BGR2GRAY)
 
-real_chess = cv2.imread('real_chessboard.jpeg')
+real_chess = cv2.imread('02-Corner-Detection/real_chessboard.jpeg')
 real_chess = cv2.cvtColor(real_chess, cv2.COLOR_BGR2RGB)
 
 gray_real_chess = cv2.cvtColor(real_chess, cv2.COLOR_BGR2GRAY)
@@ -62,6 +62,6 @@ def shi_tomasi(gray_img, img, dots):
 
 
 shi_tomasi(gray_real_chess, real_chess, 45)
-shi_tomasi(gray_flat_chess, flat_chess, 45)
+# shi_tomasi(gray_flat_chess, flat_chess, 45)
 
 plt.show()

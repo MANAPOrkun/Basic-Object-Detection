@@ -8,11 +8,11 @@ def display(img,cmap=None):
     ax.imshow(img,cmap=cmap)
 
 
-sep_coins = cv2.imread('/home/tyrael/Documents/Basic-Object-Detection/07-Watershed-Algorithm/pennies.jpg')
+sep_coins = cv2.imread('07-Watershed-Algorithm/pennies.jpg')
 
 # Watershed Algorithm
 
-img = cv2.imread('/home/tyrael/Documents/Basic-Object-Detection/07-Watershed-Algorithm/pennies.jpg')
+img = cv2.imread('07-Watershed-Algorithm/pennies.jpg')
 # Blur
 img = cv2.medianBlur(img,35)
 
@@ -51,14 +51,14 @@ markers = cv2.watershed(img,markers)
 
 # Find Contours on Markers
 
-image, contours, hierarchy = cv2.findContours(markers.copy(), cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(markers.copy(), cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
 
 # For every entry in contours
 for i in range(len(contours)):
-    
+
     # last column in the array is -1 if an external contour (no contours inside of it)
     if hierarchy[0][i][3] == -1:
-        
+
         # We can now draw the external contours from the list of contours
         cv2.drawContours(sep_coins, contours, i, (255, 0, 0), 10)
 

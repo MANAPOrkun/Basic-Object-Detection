@@ -57,7 +57,7 @@ Some basic object detection algorithms used on images.
   <summary>Watershed Algorithm</summary>
 
  <p align="center">
-  <img src="watershed_example.png" width="50%">.
+  <img src="watershed_algorithm_example.png" width="50%">.
 </p>
 </details>
 

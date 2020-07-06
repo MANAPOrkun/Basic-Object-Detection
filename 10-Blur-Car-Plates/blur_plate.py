@@ -1,8 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt
 
-car_img = cv2.imread('car_plate2.jpg')
-cascade = cv2.CascadeClassifier('haarcascade_russian_plate_number.xml')
+car_img = cv2.imread('10-Blur-Car-Plates/car_plate2.jpg')
+cascade = cv2.CascadeClassifier('10-Blur-Car-Plates/haarcascade_russian_plate_number.xml')
 
 
 def display(img):
@@ -15,7 +15,8 @@ def display(img):
 
 def detect_and_blur_plate(img):
     plate_img = img.copy()
-    place_rects = cascade.detectMultiScale(plate_img, scaleFactor=1.2, minNeighbors=5)
+    place_rects = cascade.detectMultiScale(
+        plate_img, scaleFactor=1.2, minNeighbors=5)
 
     for (x, y, w, h) in place_rects:
         cropped = img.copy()[y:y + h, x:x + w]
